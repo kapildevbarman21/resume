@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapil Dev Barman - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+            background: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        .resume-container {
+            width: 794px;
+            min-height: 1123px;
+            background: #fff;
+            display: flex;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        /* ===== LEFT SIDEBAR ===== */
+        .sidebar {
+            width: 260px;
+            min-width: 260px;
+            background: #f5f5f5;
+            padding: 30px 20px 30px 25px;
+            border-right: 1px solid #e0e0e0;
+        }
+
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 900;
+            color: #1a1a1a;
+            line-height: 1.1;
+            margin-bottom: 5px;
+            display: inline-block;
+            animation: floating 3.5s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(0px);
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+            }
+            50% {
+                transform: translateY(-6px);
+                text-shadow: 0 8px 14px rgba(0, 0, 0, 0.16);
+            }
+            100% {
+                transform: translateY(0px);
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+            }
+        }
+
+        .subtitle {
+            font-size: 11px;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .location-tag {
+            font-size: 10px;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .section-title-sidebar {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .summary-text {
+            font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+            color: #1e293b;
+            line-height: 1.62;
+            letter-spacing: 0.1px;
+            text-align: justify;
+            text-justify: inter-word;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            margin-bottom: 8px;
+        }
+
+        .summary-bullets {
+            margin-bottom: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .summary-bullet {
+            font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+            font-size: 9.8px;
+            font-weight: 400;
+            line-height: 1.54;
+            color: #1e293b;
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+            text-align: left;
+        }
+
+        .summary-bullet .bullet-dot {
+            color: #e53935;
+            font-size: 11px;
+            line-height: 13px;
+            flex-shrink: 0;
+        }
+
+        .contact-section {
+            margin-bottom: 18px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 10px;
+            color: #333;
+        }
+
+        .contact-item a {
+            color: inherit;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: color 0.2s ease;
+        }
+
+        .contact-item a:hover {
+            color: #0077b5;
+        }
+
+        .contact-item i, .contact-item .contact-icon {
+            width: 20px;
+            margin-right: 8px;
+            font-size: 13px;
+            color: #333;
+            text-align: center;
+            transition: color 0.2s ease;
+        }
+
+        .contact-item a:hover i, .contact-item a:hover .contact-icon {
+            color: #0077b5;
+        }
+
+        .contact-item span {
+            word-break: break-all;
+        }
+
+        /* Tools Section */
+        .tools-section {
+            margin-bottom: 20px;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 42px);
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .tool-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 700;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-ps { background: #001e36; }
+        .tool-ps::after { content: 'Ps'; font-size: 18px; font-weight: 700; }
+        
+        .tool-lr { background: #001e36; }
+        .tool-lr::after { content: 'Lr'; font-size: 18px; font-weight: 700; color: #8BC3FC; }
+
+        .tool-pr { background: #00005b; }
+        .tool-pr::after { content: 'Pr'; font-size: 18px; font-weight: 700; color: #9999FF; }
+
+        .tool-ai { background: #330000; }
+        .tool-ai::after { content: 'Ai'; font-size: 18px; font-weight: 700; color: #FF9A00; }
+
+        .tool-coreldraw { 
+            background: #fff; 
+            border: 1px solid #ddd;
+        }
+        
+        .tool-spark { 
+            background: linear-gradient(135deg, #ffd700, #ff6b35, #e91e63, #9c27b0);
+        }
+
+        .tool-artstudio {
+            background: #1a1a1a;
+        }
+
+        .tool-meta {
+            background: #fff;
+            border: 1px solid #ddd;
+        }
+
+        .tool-blender {
+            background: #ea7600;
+            border-radius: 8px;
+        }
+
+        .tool-canva {
+            background: #7d2ae8;
+            border-radius: 8px;
+        }
+        .tool-canva::after { content: 'Canva'; font-size: 10px; font-weight: 700; }
+
+        .tool-figma {
+            background: #1a1a1a;
+        }
+
+        .tool-ae { background: #00005b; }
+        .tool-ae::after { content: 'Ae'; font-size: 18px; font-weight: 700; color: #9999FF; }
+
+        .divider-line {
+            width: 100%;
+            height: 1px;
+            background: #333;
+            margin: 15px 0;
+        }
+
+        /* Follow Me Section */
+        .follow-section {
+            margin-top: 10px;
+        }
+
+        .follow-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .follow-icons a {
+            font-size: 22px;
+            color: #1a1a1a;
+            text-decoration: none;
+            transition: transform 0.2s ease, color 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .follow-icons a:hover {
+            transform: scale(1.18);
+            color: #0077b5;
+        }
+
+        /* ===== RIGHT MAIN CONTENT ===== */
+        .main-content {
+            flex: 1;
+            padding: 30px 25px 30px 30px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+        }
+
+        /* Experience Timeline */
+        .experience-section {
+            margin-bottom: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .section-title-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .section-title-row .section-title {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .exp-title-badge {
+            height: 24px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+            opacity: 0.9;
+            transition: transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+            cursor: pointer;
+        }
+
+        .exp-title-badge:hover {
+            opacity: 1;
+            transform: scale(1.18);
+            filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
+        }
+
+        /* ===== ID CARD POPUP MODAL ===== */
+        .id-card-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(10, 10, 15, 0.72);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+        }
+
+        .id-card-modal.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .id-card-wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: translateY(-30px) scale(0.92);
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            max-height: 92vh;
+            cursor: pointer;
+        }
+
+        .id-card-modal.active .id-card-wrapper {
+            transform: translateY(0) scale(1);
+        }
+
+        .id-card-full-img {
+            max-height: 86vh;
+            max-width: 90vw;
+            height: auto;
+            width: auto;
+            display: block;
+            filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.5)) drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            user-select: none;
+            image-rendering: -webkit-optimize-contrast;
+            cursor: pointer;
+        }
+
+        .id-card-full-img:hover {
+            transform: rotate(0.8deg) scale(1.02);
+        }
+
+        .id-card-close {
+            position: absolute;
+            top: 10px;
+            right: -48px;
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            border-radius: 50%;
+            color: #1a1a1a;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 36px;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .id-card-close:hover {
+            transform: scale(1.15) rotate(90deg);
+            background: #fff;
+            color: #e53935;
+        }
+
+        .id-card-hint {
+            margin-top: 14px;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 11px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .timeline {
+            position: relative;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 18px;
+            position: relative;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-left {
+            display: flex;
+            align-items: flex-start;
+            min-width: 90px;
+            padding-right: 15px;
+            position: relative;
+        }
+
+        .timeline-item:not(:last-child) .timeline-left::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 9px;
+            height: calc(100% + 18px);
+            width: 2px;
+            background: #d1d5db;
+            z-index: 1;
+        }
+
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            background: #f9f9f9;
+            border: 1.5px solid #d1d5db;
+            border-radius: 50%;
+            margin-right: 10px;
+            margin-top: 3px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .timeline-dot::after {
+            content: '';
+            width: 5px;
+            height: 5px;
+            background: #1a1a1a;
+            border-radius: 50%;
+        }
+
+        .timeline-year {
+            font-size: 13px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .timeline-right {
+            flex: 1;
+        }
+
+        .timeline-right h3 {
+            font-size: 12px;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .timeline-right .role {
+            font-size: 11px;
+            color: #555;
+            margin-bottom: 1px;
+        }
+
+        .timeline-right .duration {
+            font-size: 10px;
+            font-weight: 500;
+            color: #64748b;
+            margin-bottom: 1px;
+        }
+
+        .timeline-right .location-sm {
+            font-size: 9.5px;
+            font-weight: 500;
+            color: #64748b;
+        }
+
+        .tags-row {
+            margin-top: 8px;
+            font-size: 10px;
+            color: #475569;
+        }
+
+        /* Education */
+        .education-section {
+            margin-bottom: 20px;
+        }
+
+        .education-item {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .edu-dot {
+            width: 10px;
+            height: 10px;
+            background: #e53935;
+            border-radius: 50%;
+            margin-right: 10px;
+            margin-top: 5px;
+            flex-shrink: 0;
+        }
+
+        .edu-year {
+            font-size: 12px;
+            font-weight: 700;
+            color: #1a1a1a;
+            min-width: 75px;
+            margin-right: 15px;
+        }
+
+        .edu-details h3 {
+            font-size: 13px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 3px;
+        }
+
+        .edu-details p {
+            font-size: 10px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Certification */
+        .certification-section {
+            margin-bottom: 20px;
+        }
+
+        .cert-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 14px;
+            position: relative;
+        }
+
+        .cert-logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 6px;
+            margin-right: 12px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 700;
+            overflow: hidden;
+        }
+
+        .cert-details {
+            flex: 1;
+        }
+
+        .cert-details h4 {
+            font-size: 11px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 1px;
+        }
+
+        .cert-details .cert-issuer {
+            font-size: 10px;
+            font-weight: 500;
+            color: #475569;
+        }
+
+        .cert-details .cert-date {
+            font-size: 9.5px;
+            font-weight: 500;
+            color: #64748b;
+        }
+
+        .cert-details .cert-id {
+            font-size: 9px;
+            font-weight: 500;
+            color: #475569;
+            word-break: break-all;
+            margin-top: 1px;
+            letter-spacing: 0.1px;
+        }
+
+        .cert-credential {
+            font-size: 9.5px;
+            font-weight: 600;
+            color: #475569;
+            text-align: right;
+            white-space: nowrap;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: color 0.2s ease;
+        }
+
+        .cert-details h4 a:hover,
+        .cert-details .cert-id a:hover,
+        .cert-credential:hover {
+            color: #0077b5 !important;
+            text-decoration: underline !important;
+        }
+
+        /* Skills */
+        .skills-section {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .skill-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-name {
+            font-size: 11px;
+            color: #333;
+            min-width: 130px;
+            font-style: italic;
+        }
+
+        .skill-bar-container {
+            flex: 1;
+            height: 10px;
+            background: #e0e0e0;
+            border-radius: 5px;
+            margin-right: 10px;
+            overflow: hidden;
+        }
+
+        .skill-bar {
+            height: 100%;
+            border-radius: 5px;
+            transition: width 1s ease;
+        }
+
+        .skill-bar-95 {
+            width: 95%;
+            background: linear-gradient(90deg, #e53935, #d32f2f);
+        }
+
+        .skill-bar-85 {
+            width: 85%;
+            background: linear-gradient(90deg, #e53935, #d32f2f);
+        }
+
+        .skill-percent {
+            font-size: 10px;
+            color: #555;
+            min-width: 30px;
+            text-align: right;
+        }
+
+        /* Google Logo SVG-like */
+        .google-logo {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .google-g {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #4285F4 25%, #EA4335 25%, #EA4335 50%, #FBBC05 50%, #FBBC05 75%, #34A853 75%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Tool icon images using CSS art */
+        .tool-icon-img {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* SVG tool icons */
+        .tool-icon svg {
+            width: 26px;
+            height: 26px;
+        }
+
+        @media print {
+            body {
+                background: #fff;
+                padding: 0;
+            }
+            .resume-container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- LEFT SIDEBAR -->
+        <div class="sidebar">
+            <h1 class="name">Kapil Dev Barman</h1>
+            <p class="subtitle">BCA in Cybersecurity | Ethical Hacking</p>
+            <p class="location-tag">Greater Bengaluru Area</p>
+
+            <h2 class="section-title-sidebar">Summary</h2>
+            <p class="summary-text">
+                I am a BCA student specializing in Cybersecurity, with a strong interest in cybersecurity, ethical hacking, networking, and emerging technologies. I am currently building my skills through academic projects, hands-on learning, and industry-focused certifications. I enjoy exploring how technology works and learning how to identify and protect systems from security threats. Alongside my technical skills, I have a strong interest in Graphic Design and Adobe Photoshop, where I create digital content, visual designs, and creative projects. I am continuously learning new tools and technologies, working on practical projects, and developing skills that can help me grow as a technology and creative professional.
+            </p>
+            <div class="summary-bullets">
+                <div class="summary-bullet"><span class="bullet-dot">•</span><span>Founded and run an AI-powered creative agency delivering AI-generated video, motion graphics, and social media content for brands and creators.</span></div>
+                <div class="summary-bullet"><span class="bullet-dot">•</span><span>Produce vertical (9:16) SaaS-style promo videos and animated reels, using AI tools to cut production time and cost compared with traditional editing.</span></div>
+                <div class="summary-bullet"><span class="bullet-dot">•</span><span>Write reel scripts and manage an Instagram marketing page to attract clients and build the agency's brand.</span></div>
+                <div class="summary-bullet"><span class="bullet-dot">•</span><span>Craft detailed AI prompts for image and video generation, including Ghibli-style animation, to get consistent, on-brand visuals.</span></div>
+                <div class="summary-bullet"><span class="bullet-dot">•</span><span>Handle the full workflow from concept and scripting to visuals, animation, and final delivery.</span></div>
+            </div>
+
+            <h2 class="section-title-sidebar" style="font-size: 14px; letter-spacing: 1px;">CONTACT</h2>
+            <div class="contact-section">
+                <div class="contact-item">
+                    <a href="tel:+916297598649">
+                        <i class="fas fa-phone-alt contact-icon"></i>
+                        <span>+91 6297598649</span>
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <a href="mailto:indianarmy62971008@gmail.com">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <span>indianarmy62971008@gmail.com</span>
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt contact-icon"></i>
+                    <span>Bengaaluru, Karnataka, India</span>
+                </div>
+            </div>
+
+            <h2 class="section-title-sidebar" style="font-size: 14px; letter-spacing: 1px;">TOOLS</h2>
+            <div class="tools-grid">
+                <!-- Row 1 -->
+                <div class="tool-icon" style="background:transparent;">
+                    <img src="ps-logo.png" alt="Photoshop" style="width:100%;height:100%;display:block;border-radius:8px;">
+                </div>
+                <div class="tool-icon" style="background:transparent;">
+                    <img src="lr-logo.png" alt="Lightroom" style="width:100%;height:100%;display:block;border-radius:8px;">
+                </div>
+                <div class="tool-icon" style="background:transparent;">
+                    <img src="pr-logo.png" alt="Premiere Pro" style="width:100%;height:100%;display:block;border-radius:8px;">
+                </div>
+                <div class="tool-icon" style="background:transparent;">
+                    <img src="adobe-express-logo.png" alt="Adobe Express" style="width:100%;height:100%;display:block;border-radius:8px;">
+                </div>
+                <!-- Row 2 -->
+                <div class="tool-icon" style="background:transparent;">
+                    <img src="claude-logo.png" alt="Claude" style="width:100%;height:100%;display:block;border-radius:8px;">
+                </div>
+                <div class="tool-icon" style="background:transparent;">
+                    <img src="gemini-star.png" alt="Google Gemini" style="width:100%;height:100%;object-fit:contain;display:block;">
+                </div>
+                <div class="tool-icon" style="background:transparent;">
+                    <img src="google-ads-logo.png" alt="Google Ads" style="width:100%;height:100%;object-fit:contain;display:block;">
+                </div>
+                <div class="tool-icon" style="background:transparent;">
+                    <img src="meta-logo.png" alt="Meta" style="width:100%;height:100%;object-fit:contain;display:block;">
+                </div>
+                <!-- Row 3 -->
+                <div class="tool-icon" style="background:transparent;">
+                    <img src="davinci-logo.png" alt="DaVinci Resolve" style="width:100%;height:100%;display:block;border-radius:8px;">
+                </div>
+                <div class="tool-icon" style="background:transparent;">
+                    <img src="canva-app-logo.png" alt="Canva" style="width:100%;height:100%;display:block;border-radius:8px;">
+                </div>
+                <div class="tool-icon" style="background:transparent;">
+                    <img src="figma-logo.png" alt="Figma" style="width:100%;height:100%;display:block;border-radius:8px;">
+                </div>
+                <div class="tool-icon" style="background:transparent;">
+                    <img src="ae-logo.png" alt="After Effects" style="width:100%;height:100%;display:block;border-radius:8px;">
+                </div>
+                <!-- Row 4 -->
+                <div class="tool-icon" style="background:transparent;">
+                    <img src="chatgpt-logo.png" alt="ChatGPT" style="width:100%;height:100%;object-fit:contain;display:block;">
+                </div>
+                <div class="tool-icon" style="background:transparent;">
+                    <img src="google-analytics-logo.png" alt="Google Analytics" style="width:100%;height:100%;object-fit:contain;display:block;">
+                </div>
+            </div>
+
+            <div class="divider-line" style="margin-top: 20px;"></div>
+
+            <h2 class="section-title-sidebar" style="font-size: 14px; letter-spacing: 1px; margin-top: 10px;">FOLLOW ME</h2>
+            <div class="follow-icons">
+                <a href="https://www.instagram.com/i.ammortal?stkn=aDYwMXpxY2Nva2dv&utm_source=qr" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/kapil-dev-barman-311b29290" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/kapildevbarman21" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://in.pinterest.com/indianarmy62971008/" target="_blank" title="Pinterest"><img src="pinterest-logo.png" alt="Pinterest" style="width:20px;height:20px;display:block;object-fit:contain;"></a>
+            </div>
+        </div>
+
+        <!-- RIGHT MAIN CONTENT -->
+        <div class="main-content">
+            <!-- EXPERIENCE -->
+            <div class="section-title-row">
+                <h2 class="section-title">EXPERIENCE</h2>
+                <img src="id-card-icon.png" alt="ID Badge" class="exp-title-badge" id="idCardTrigger" title="Click to view ID card" onclick="toggleIdCard()">
+            </div>
+            <div class="experience-section">
+                <div class="timeline">
+                    <!-- Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-left">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-year">2024</span>
+                        </div>
+                        <div class="timeline-right">
+                            <h3>SAROJINI GROUP OF INSTITUTIONS</h3>
+                            <p class="role">Graphic Designer</p>
+                            <p class="duration">November 2024 - May 2025 (7 months)</p>
+                            <p class="location-sm">Greater Bengaluru Area</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-left">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-year">2025</span>
+                        </div>
+                        <div class="timeline-right">
+                            <h3>Banaswadi College Of Nursing</h3>
+                            <p class="role">Graphic Designer</p>
+                            <p class="duration">June 2025 - March 2026 (10 months)</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-left">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-year">2025</span>
+                        </div>
+                        <div class="timeline-right">
+                            <h3>New Ebenezer Institute of Technology (NEIT)</h3>
+                            <p class="role">Graphic Designer Specialist</p>
+                            <p class="duration">December 2025 - Present (11 months)</p>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-left">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-year">2026</span>
+                        </div>
+                        <div class="timeline-right">
+                            <h3>Mind Mantra Abacus</h3>
+                            <p class="role">Digital Marketing Executive</p>
+                            <p class="duration">September 2026 - Present (2 months)</p>
+                            <p class="location-sm">Balurghat</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tags-row" style="margin-top: 12px; border-top: 1px solid #e0e0e0; padding-top: 8px;">
+                    Social Media • Reels • Creative Ads • Performance Marketing
+                </div>
+            </div>
+
+            <!-- EDUCATION -->
+            <h2 class="section-title">EDUCATION</h2>
+            <div class="education-section">
+                <div class="education-item">
+                    <div class="edu-dot"></div>
+                    <span class="edu-year">2024 - 2027</span>
+                    <div class="edu-details">
+                        <h3><a href="https://bnu.karnataka.gov.in/en" target="_blank" style="color: inherit; text-decoration: none;">Bangalore North University</a></h3>
+                        <p>Bachelorof ComputerApplication, COMPUTER AND<br>INFORMATION SCIENCES AND SUPPORT SERVICES,<br>BCA in Cyber Security · (July 2024 - July 2027)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CERTIFICATION -->
+            <h2 class="section-title">CERTIFICATION</h2>
+            <div class="certification-section">
+                <!-- Cert 1 -->
+                <div class="cert-item">
+                    <div class="cert-logo">
+                        <svg viewBox="0 0 48 48" width="36" height="36"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59A14.5 14.5 0 0 1 9.5 24c0-1.59.28-3.14.76-4.59l-7.98-6.19A23.99 23.99 0 0 0 0 24c0 3.77.9 7.35 2.56 10.54l7.97-5.95z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 5.95C6.51 42.62 14.62 48 24 48z"/></svg>
+                    </div>
+                    <div class="cert-details">
+                        <h4><a href="https://skillshop.credential.net/fa08f1fd-3d57-423a-a67e-a2a9bf1c65aa#acc.TxoGAW7k" target="_blank" style="color: inherit; text-decoration: none;">Campaign manager 360 Certification</a></h4>
+                        <p class="cert-issuer">Google</p>
+                        <p class="cert-date">Issued Sep 2026 · Expires Sep 2027</p>
+                    </div>
+                    <a href="https://skillshop.credential.net/fa08f1fd-3d57-423a-a67e-a2a9bf1c65aa#acc.TxoGAW7k" target="_blank" class="cert-credential" style="text-decoration: none; color: #888;">Credential ID 195196847</a>
+                </div>
+                <!-- Cert 2 -->
+                <div class="cert-item">
+                    <div class="cert-logo">
+                        <svg viewBox="0 0 48 48" width="36" height="36"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59A14.5 14.5 0 0 1 9.5 24c0-1.59.28-3.14.76-4.59l-7.98-6.19A23.99 23.99 0 0 0 0 24c0 3.77.9 7.35 2.56 10.54l7.97-5.95z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 5.95C6.51 42.62 14.62 48 24 48z"/></svg>
+                    </div>
+                    <div class="cert-details">
+                        <h4><a href="https://skillshop.credential.net/0e495e24-e8ce-420e-ac0c-112725b4c327#acc.7YTeZSoG" target="_blank" style="color: inherit; text-decoration: none;">Google Ads Video Certification</a></h4>
+                        <p class="cert-issuer">Google</p>
+                        <p class="cert-date">Issued Sep 2026 · Expires Sep 2027</p>
+                    </div>
+                    <a href="https://skillshop.credential.net/0e495e24-e8ce-420e-ac0c-112725b4c327#acc.7YTeZSoG" target="_blank" class="cert-credential" style="text-decoration: none; color: #888;">Credential ID 195142264</a>
+                </div>
+                <!-- Cert 3 -->
+                <div class="cert-item">
+                    <div class="cert-logo">
+                        <svg viewBox="0 0 48 48" width="36" height="36">
+                            <rect width="48" height="48" rx="10" fill="#168a71"/>
+                            <polygon points="24,12 40,20 24,28 8,20" fill="#ffffff"/>
+                            <polygon points="22,17 28,20 22,23" fill="#168a71"/>
+                            <path d="M14,24.5 L14,29 C14,35 34,35 34,29 L34,24.5 C31.5,26.5 27.5,27.5 24,27.5 C20.5,27.5 16.5,26.5 14,24.5 Z" fill="#ffffff"/>
+                            <path d="M36.5,22 L36.5,30 M35.5,30 L37.5,30" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="36.5" cy="31" r="1.2" fill="#ffffff"/>
+                        </svg>
+                    </div>
+                    <div class="cert-details">
+                        <h4><a href="https://drive.google.com/file/d/1aYjev-ek1eNyMacS9YJXUgbYok2XKxhE/view?usp=drivesdk" target="_blank" style="color: inherit; text-decoration: none;">Adobe Photoshop – Cursa Certificate</a></h4>
+                        <p class="cert-issuer">Cursa - Cursos Online</p>
+                        <p class="cert-date">Issued Sep 2026</p>
+                        <p class="cert-id"><a href="https://drive.google.com/file/d/1aYjev-ek1eNyMacS9YJXUgbYok2XKxhE/view?usp=drivesdk" target="_blank" style="color: inherit; text-decoration: none;">Credential ID a02a2b18aaf7e4a6ee878fe8da4bce6</a></p>
+                    </div>
+                </div>
+                <!-- Cert 4 -->
+                <div class="cert-item">
+                    <div class="cert-logo">
+                        <img src="canva-logo.png" alt="Canva" style="width:36px;height:36px;display:block;">
+                    </div>
+                    <div class="cert-details">
+                        <h4><a href="https://drive.google.com/file/d/1mv28FCjJfo-atA6hlb4hOfJ3-OIMA57g/view?usp=drive_link" target="_blank" style="color: inherit; text-decoration: none;">Work smarter with AI AND AI Essentials</a></h4>
+                        <p class="cert-issuer">Canva</p>
+                        <p class="cert-date">Issued Sep 2026</p>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1mv28FCjJfo-atA6hlb4hOfJ3-OIMA57g/view?usp=drive_link" target="_blank" class="cert-credential" style="top: auto; text-decoration: none; color: #888;">Credential ID f1680b<br>Credential ID e590b9</a>
+                </div>
+            </div>
+
+            <!-- SKILLS -->
+            <h2 class="section-title">SKILLS</h2>
+            <div class="skills-section">
+                <div class="skill-item">
+                    <span class="skill-name">Graphic Design</span>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar skill-bar-95"></div>
+                    </div>
+                    <span class="skill-percent">95%</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Adobe Photoshop</span>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar skill-bar-95"></div>
+                    </div>
+                    <span class="skill-percent">95%</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Adobe Express</span>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar skill-bar-95"></div>
+                    </div>
+                    <span class="skill-percent">95%</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Canva</span>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar skill-bar-95"></div>
+                    </div>
+                    <span class="skill-percent">95%</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Figma</span>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar skill-bar-85"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">UI/UX Design</span>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar skill-bar-85"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Video Editing</span>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar skill-bar-85"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Photography</span>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar skill-bar-85"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Digital Marketing</span>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar skill-bar-85"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ID CARD MODAL OVERLAY -->
+    <div id="idCardModal" class="id-card-modal" onclick="handleModalClick(event)">
+        <div class="id-card-wrapper" onclick="event.stopPropagation()">
+            <button class="id-card-close" onclick="closeIdCard()" title="Close">&times;</button>
+            <img src="kapil-id-card.png" alt="Kapil Dev Barman ID Card" class="id-card-full-img" onclick="closeIdCard()">
+            <p class="id-card-hint">Click anywhere to close</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleIdCard() {
+            const modal = document.getElementById('idCardModal');
+            if (!modal) return;
+            if (modal.classList.contains('active')) {
+                closeIdCard();
+            } else {
+                openIdCard();
+            }
+        }
+
+        function openIdCard() {
+            const modal = document.getElementById('idCardModal');
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeIdCard() {
+            const modal = document.getElementById('idCardModal');
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function handleModalClick(event) {
+            if (event.target.id === 'idCardModal') {
+                closeIdCard();
+            }
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeIdCard();
+            }
+        });
+    </script>
+</body>
+</html>
