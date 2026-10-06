@@ -737,6 +737,309 @@
             height: 26px;
         }
 
+        /* ===== MOBILE RESPONSIVE (PHONE VIEW) ===== */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 0;
+                background: #f8fafc;
+            }
+
+            .resume-container {
+                width: 100% !important;
+                min-width: 100% !important;
+                max-width: 100% !important;
+                min-height: auto !important;
+                flex-direction: column !important;
+                box-shadow: none !important;
+                border-radius: 0 !important;
+            }
+
+            /* Sidebar full width on phone */
+            .sidebar {
+                width: 100% !important;
+                min-width: 100% !important;
+                padding: 24px 20px 20px 20px !important;
+                border-right: none !important;
+                border-bottom: 2px solid #e2e8f0 !important;
+            }
+
+            .name {
+                font-size: 26px !important;
+                letter-spacing: 3px !important;
+                line-height: 1.2 !important;
+            }
+
+            .title {
+                font-size: 11.5px !important;
+                letter-spacing: 2px !important;
+                margin-bottom: 16px !important;
+            }
+
+            .sidebar-title {
+                font-size: 13px !important;
+                letter-spacing: 2px !important;
+                margin-bottom: 10px !important;
+            }
+
+            .summary-text {
+                font-size: 12.5px !important;
+                line-height: 1.65 !important;
+                text-align: left !important;
+                margin-bottom: 10px !important;
+            }
+
+            .summary-bullets {
+                gap: 8px !important;
+                margin-bottom: 18px !important;
+            }
+
+            .summary-bullet {
+                font-size: 12px !important;
+                line-height: 1.55 !important;
+            }
+
+            .summary-bullet .bullet-dot {
+                font-size: 13px !important;
+            }
+
+            .contact-item {
+                font-size: 13px !important;
+                margin-bottom: 9px !important;
+            }
+
+            .contact-item i, .contact-item .contact-icon {
+                font-size: 14px !important;
+                width: 22px !important;
+            }
+
+            .tools-grid {
+                grid-template-columns: repeat(4, 1fr) !important;
+                gap: 10px !important;
+            }
+
+            .tool-icon {
+                width: 48px !important;
+                height: 48px !important;
+                border-radius: 9px !important;
+            }
+
+            .tool-icon img {
+                max-width: 30px !important;
+                max-height: 30px !important;
+            }
+
+            .follow-icons {
+                gap: 18px !important;
+                margin-top: 8px !important;
+            }
+
+            .follow-icons a {
+                font-size: 24px !important;
+                padding: 4px !important;
+            }
+
+            /* Main Content full width on phone */
+            .main-content {
+                width: 100% !important;
+                padding: 24px 20px 30px 20px !important;
+            }
+
+            .section-title {
+                font-size: 18px !important;
+                letter-spacing: 2.5px !important;
+            }
+
+            .section-title-row {
+                margin-bottom: 14px !important;
+            }
+
+            .exp-title-badge {
+                height: 26px !important;
+                padding: 3px !important;
+            }
+
+            .experience-section,
+            .education-section,
+            .certification-section,
+            .skills-section {
+                padding: 18px 16px !important;
+                border-radius: 12px !important;
+                margin-bottom: 20px !important;
+            }
+
+            /* Timeline items */
+            .timeline-item {
+                margin-bottom: 18px !important;
+            }
+
+            .timeline-left {
+                min-width: 68px !important;
+                padding-right: 12px !important;
+            }
+
+            .timeline-year {
+                font-size: 13px !important;
+            }
+
+            .timeline-right h3 {
+                font-size: 13.5px !important;
+                margin-bottom: 2px !important;
+            }
+
+            .timeline-right .role {
+                font-size: 12.5px !important;
+                margin-bottom: 2px !important;
+            }
+
+            .timeline-right .duration {
+                font-size: 11.5px !important;
+            }
+
+            .timeline-right .location-sm {
+                font-size: 11px !important;
+            }
+
+            .tags-row {
+                font-size: 11.5px !important;
+                line-height: 1.5 !important;
+                margin-top: 10px !important;
+            }
+
+            /* Education */
+            .education-item {
+                margin-bottom: 16px !important;
+            }
+
+            .edu-year {
+                min-width: 68px !important;
+                font-size: 13px !important;
+                margin-right: 12px !important;
+            }
+
+            .edu-details h3 {
+                font-size: 13.5px !important;
+                margin-bottom: 3px !important;
+            }
+
+            .edu-details p {
+                font-size: 12px !important;
+                line-height: 1.55 !important;
+            }
+
+            /* Certifications - Clean mobile stacked layout without overlapping */
+            .cert-item {
+                flex-direction: row !important;
+                align-items: flex-start !important;
+                margin-bottom: 16px !important;
+                padding-bottom: 14px !important;
+                border-bottom: 1px solid #f1f5f9 !important;
+            }
+
+            .cert-item:last-child {
+                border-bottom: none !important;
+                padding-bottom: 0 !important;
+                margin-bottom: 0 !important;
+            }
+
+            .cert-logo {
+                width: 40px !important;
+                height: 40px !important;
+                margin-right: 12px !important;
+            }
+
+            .cert-details h4 {
+                font-size: 13px !important;
+                line-height: 1.4 !important;
+                margin-bottom: 3px !important;
+                padding-right: 0 !important;
+            }
+
+            .cert-details .cert-issuer {
+                font-size: 11.5px !important;
+                margin-bottom: 2px !important;
+            }
+
+            .cert-details .cert-date {
+                font-size: 11px !important;
+                margin-bottom: 3px !important;
+            }
+
+            .cert-details .cert-id {
+                font-size: 10.5px !important;
+                display: block !important;
+                margin-top: 4px !important;
+            }
+
+            .cert-credential {
+                position: static !important;
+                display: inline-block !important;
+                text-align: left !important;
+                font-size: 11px !important;
+                font-weight: 600 !important;
+                color: #0284c7 !important;
+                margin-top: 6px !important;
+                padding: 4px 8px !important;
+                background: #f0f9ff !important;
+                border-radius: 6px !important;
+                border: 1px solid #bae6fd !important;
+            }
+
+            /* Skills progress bars */
+            .skill-item {
+                margin-bottom: 12px !important;
+            }
+
+            .skill-name {
+                font-size: 12px !important;
+                min-width: 100px !important;
+            }
+
+            .skill-percent {
+                font-size: 11.5px !important;
+            }
+
+            /* ID Card Modal on Phone */
+            .id-card-modal {
+                padding: 12px !important;
+            }
+
+            .id-card-wrapper {
+                width: 100% !important;
+                max-height: 94vh !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+
+            .id-card-close {
+                position: fixed !important;
+                top: 16px !important;
+                right: 16px !important;
+                width: 42px !important;
+                height: 42px !important;
+                font-size: 28px !important;
+                line-height: 42px !important;
+                z-index: 10001 !important;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45) !important;
+            }
+
+            .id-card-full-img {
+                max-width: 92vw !important;
+                max-height: 75vh !important;
+                object-fit: contain !important;
+            }
+
+            .id-card-hint {
+                font-size: 12px !important;
+                margin-top: 12px !important;
+                padding: 6px 14px !important;
+                background: rgba(0, 0, 0, 0.6) !important;
+                border-radius: 20px !important;
+                backdrop-filter: blur(4px) !important;
+            }
+        }
+
         @media print {
             body {
                 background: #fff;
